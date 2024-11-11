@@ -1,0 +1,64 @@
+PROMPT: Please assist me to rewrite or translate my Student.java class to be compatible with Java 17. Provide a detailed summary of updates along with the code to bring this class up to Java 17 compatibility. Highlight potential performance gains or readability improvements achieved through the upgrade.
+ 
+Specifically:
+ 
+•   Please do not eliminate or remove any methods from my existing Student.java code
+•   Analyze the provided Student.java code and identify all necessary changes to ensure full compatibility with Java 17.
+•   Adhere to Java 17 syntax and coding conventions.
+•   All the methods in the class should be ported over in the new Java 17 compatible class.
+•   Do not eliminate any properties.
+•   Maintain the Serializable interface for backwards compatibility if possible.
+•   Switch Expressions: Transform existing switch statements into cleaner Java 17+ switch expressions whenever possible. This can significantly improve readability.
+•   Text Blocks: If Student.java contains string literals with multiple lines or complex formatting, demonstrate how Java 17 text blocks can streamline code.
+•   Records: If your Student class or associated data types have many fields used primarily as data-holders, show how records can simplify them.
+•   Pattern Matching: If Student.java uses instanceof checks followed by casting, refactor these with Java 17's pattern matching for instanceof for a cleaner syntax.
+•   Replace the URL object with the most appropriate modern alternative from Java 17.
+•   Update any other aspects of the code to adhere to Java 17 syntax and best practices.
+
+This prompt is for inline suggestions outside of the file.
+
+
+PROMPT: Please rewrite or translate my cart-details.component.ts to use the Angular version 16. It is currently built using Angular 15. Provide a detailed summary of updates along with the code to bring this component to Angular 16 compatibility. Angular Update Guide (https://angular.dev/update-guide?v=15.0-16.0&l=3)
+ 
+Specifically, I need you to:
+ 
+Do not include public code.
+* **Address any breaking changes:**  Apply fixes for any other breaking changes introduced in Angular 16, such as changes to dependency injection or required inputs.
+* **Refactor for standalone components :** cart-details.component.ts show me code changes directly within the file.
+Confirm that the inject function is used appropriately within the class body, not in the constructor.
+
+PROMPT: <Prompt for package.json>
+// Update this package.json to Angular 16.
+// Update all Angular packages to the latest version (16.2.0).
+// Update all other dependencies to their latest compatible versions.
+// Refer to the Angular Update Guide https://angular.dev/reference/versions#actively-supported-versions for guidance.
+// Only update the "dependencies" and "devDependencies" sections.
+// Update typescript to the latest version compatible with Angular 16 which uses typescript's newer version. Here's the URL so you can pick specific version https://angular.dev/reference/versions#actively-supported-versions
+
+Please rewrite or translate my forget-password.component.ts to use the Angular version 20. It is currently built using Angular 12. Provide a detailed summary of updates along with the code to bring this component to Angular 20 compatibility. Angular Update Guide (https://angular.dev/update-guide?v=15.0-16.0&l=3)
+
+Specifically, I need you to:
+
+Do not include public code.
+
+Address any breaking changes: Apply fixes for any other breaking changes introduced in Angular 16, such as changes to dependency injection or required inputs. Refactor for standalone components : forget-password.component.ts show me code changes directly within the file. Confirm that the inject function is used appropriately within the class body, not in the constructor.
+
+Please upgrade the code in selected file to use the Angular version 16. It is currently built using Angular 13. Also the latest TypeScript to use is 4.9 plus
+
+Specifically, I need you to:
+
+Do not include public code.
+
+Address any breaking changes: Apply fixes for any other breaking changes introduced in Angular 16, such as changes to dependency injection or required inputs. Refactor for standalone components : show me code changes directly within the file. Explain the changes directly into the code and do not use public explanation or public code
+
+Do not refer to public code. Only use the context provided within this file to suggest changes.
+
+Please upgrade the code in selected file to use the Angular version 16. It is currently built using Angular 13. Also the latest TypeScript to use is 4.9 plus
+
+Specifically, I need you to:
+
+Address any breaking changes: Apply fixes for any other breaking changes introduced in Angular 16, such as changes to dependency injection or required inputs. Refactor for standalone components : show me code changes directly within the file. Explain the changes directly into the code and do not use public explanation or public code
+
+Show me a side-by-side view of the changes .
+
+Do not refer to public code. Only use the context provided within this file to suggest changes.
