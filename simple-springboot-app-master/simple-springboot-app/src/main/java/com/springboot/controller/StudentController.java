@@ -17,7 +17,7 @@ public class StudentController {
 	@PostMapping
 	public String saveStudentInformation(@RequestHeader("student-auth-key") String authorization,
 			@RequestBody Student student) {
-		if (StringUtils.isBlank(student.lastName())) {
+		if (StringUtils.isBlank(student.getLastName())) {
 			throw new InvalidFieldException("Last Name is a required field");
 		}
 		return String.format("Authorization %s is valid, and Data is saved", authorization);
