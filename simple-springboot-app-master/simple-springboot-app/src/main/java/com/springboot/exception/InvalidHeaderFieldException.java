@@ -1,6 +1,6 @@
 package com.springboot.exception;
 
-public class InvalidHeaderFieldException extends RuntimeException {
+public final class InvalidHeaderFieldException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
@@ -9,7 +9,7 @@ public class InvalidHeaderFieldException extends RuntimeException {
 	public InvalidHeaderFieldException(String message) {
 		this.setMessage(message);
 	}
-
+	@Override
 	public String getMessage() {
 		return message;
 	}

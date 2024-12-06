@@ -1,6 +1,6 @@
 package com.springboot.exception;
 
-public class InvalidFieldException extends RuntimeException {
+public final class InvalidFieldException extends RuntimeException {
 
 	private static final long serialVersionUID = 1L;
 
@@ -9,7 +9,7 @@ public class InvalidFieldException extends RuntimeException {
 	public InvalidFieldException(String message) {
 		this.setMessage(message);
 	}
-
+	@Override
 	public String getMessage() {
 		return message;
 	}
