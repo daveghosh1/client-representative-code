@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {NumberFormatterComponent} from './number-formatter.component';
-import {NumericEditorComponent} from './numeric-editor.component';
-import {RangeFilterComponent} from './range-filter.component';
+import { Component, OnInit } from '@angular/core';
+import { NumberFormatterComponent } from './number-formatter.component';
+import { NumericEditorComponent } from './numeric-editor.component';
+import { RangeFilterComponent } from './range-filter.component';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
     sortable: true,
     filter: true
   };
+  title = "my-angular-app";
 
   columnDefs = [
     {headerName: 'Make', field: 'make'},
