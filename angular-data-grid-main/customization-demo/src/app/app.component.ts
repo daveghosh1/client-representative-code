@@ -9,14 +9,14 @@ import { RangeFilterComponent } from './range-filter.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
-  defaultColDef = {
+  
+ public defaultColDef = {
     sortable: true,
     filter: true
   };
-  title = "my-angular-app";
+  public title = "my-angular-app";
 
-  columnDefs = [
+   columnDefs = [
     {headerName: 'Make', field: 'make'},
     {headerName: 'Model', field: 'model'},
     {
@@ -41,5 +41,6 @@ export class AppComponent implements OnInit {
     fetch('https://www.ag-grid.com/example-assets/row-data.json')
       .then(result => result.json())
       .then(rowData => this.rowData = rowData);
+      this.columnDefs;
   }
 }

@@ -1,11 +1,12 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-import {AppComponent} from './app.component';
-import {AgGridModule} from 'ag-grid-angular';
-import {NumberFormatterComponent} from './number-formatter.component';
-import {NumericEditorComponent} from './numeric-editor.component';
-import {RangeFilterComponent} from './range-filter.component';
+import { CommonModule } from '@angular/common';
+import { AgGridModule } from 'ag-grid-angular';
+import { AppComponent } from 'src/app/app.component';
+import { NumberFormatterComponent } from './number-formatter.component';
+import { NumericEditorComponent } from './numeric-editor.component';
+import { RangeFilterComponent } from './range-filter.component';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,11 @@ import {RangeFilterComponent} from './range-filter.component';
   ],
   imports: [
     BrowserModule,
-    AgGridModule.withComponents([NumberFormatterComponent, NumericEditorComponent, RangeFilterComponent])
+    AgGridModule,
+   CommonModule 
   ],
   providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA , NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {
