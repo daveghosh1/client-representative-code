@@ -35,8 +35,11 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
     "ag-grid-angular": "^31.3.2",
     "ag-grid-community": "^31.3.2",
+    "ag-grid-enterprise": "^31.3.2",
     "core-js": "^2.6.12",
     "rxjs": "^7.4.0"
   },
