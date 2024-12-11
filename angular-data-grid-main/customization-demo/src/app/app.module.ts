@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {AgGridModule} from 'ag-grid-angular';
@@ -16,8 +16,9 @@ import {RangeFilterComponent} from './range-filter.component';
   ],
   imports: [
     BrowserModule,
-    AgGridModule.withComponents([NumberFormatterComponent, NumericEditorComponent, RangeFilterComponent])
+    AgGridModule
   ],
+  schemas : [NO_ERRORS_SCHEMA, CUSTOM_ELEMENTS_SCHEMA ],
   providers: [],
   bootstrap: [AppComponent]
 })
