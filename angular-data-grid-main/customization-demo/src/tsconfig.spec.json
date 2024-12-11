@@ -5,14 +5,19 @@
     "types": [
       "jasmine",
       "node"
-    ]
+    ],
+    "target": "ES2022",
+    "module": "ESNext"
   },
   "files": [
-    "test.ts",
-    "polyfills.ts"
+    "test.ts"
   ],
   "include": [
     "**/*.spec.ts",
     "**/*.d.ts"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "strictInjectionParameters": true,
+    "strictTemplates": true
+  }
 }
