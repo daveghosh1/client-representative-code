@@ -8,6 +8,7 @@ public class Dog implements Animal {
 	@Override
 	public String characteristics() {
 		// TODO Auto-generated method stub
-		return "Bark";
+		var sound = "Bark";
+		return sound;
 	}
 }

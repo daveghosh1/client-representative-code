@@ -10,7 +10,8 @@ public class Cat implements Animal {
 	@Override
 	public String characteristics() {
 		// TODO Auto-generated method stub
-		return "Meow";
+		var sound = "Mewo";
+		return sound;
 	}
 
 }

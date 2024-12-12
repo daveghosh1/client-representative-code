@@ -18,8 +18,12 @@ public class StudentController {
 	public String saveStudentInformation(@RequestHeader("student-auth-key") String authorization,
 			@RequestBody Student student) {
 		if (StringUtils.isBlank(student.getLastName())) {
-			throw new InvalidFieldException("Last Name is a required field");
+			throw new InvalidFieldException("""
+												Last Name is a required field
+												""");
 		}
-		return String.format("Authorization %s is valid, and Data is saved", authorization);
+		return String.format("""
+								Authorization %s is valid, and Data is saved
+								""", authorization);
 	}
 }
