@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {NumberFormatterComponent} from './number-formatter.component';
-import {NumericEditorComponent} from './numeric-editor.component';
-import {RangeFilterComponent} from './range-filter.component';
+import { Component, OnInit } from '@angular/core';
+import { NumberFormatterComponent } from './number-formatter.component';
+import { NumericEditorComponent } from './numeric-editor.component';
+import { RangeFilterComponent } from './range-filter.component';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +18,7 @@ export class AppComponent implements OnInit {
   columnDefs = [
     {headerName: 'Make', field: 'make'},
     {headerName: 'Model', field: 'model'},
+    {headerName: 'Test123', field: 'test123'},
     {
       headerName: 'Price',
       field: 'price',
@@ -31,8 +32,8 @@ export class AppComponent implements OnInit {
   rowData = [];
 
   frameworkComponents = {
-    numberFormatterComponent: NumberFormatterComponent,
     numericEditorComponent: NumericEditorComponent,
+    numberFormatterComponent: NumberFormatterComponent,
     rangeFilterComponent: RangeFilterComponent
   };
 
@@ -40,5 +41,6 @@ export class AppComponent implements OnInit {
     fetch('https://www.ag-grid.com/example-assets/row-data.json')
       .then(result => result.json())
       .then(rowData => this.rowData = rowData);
+      this.columnDefs;
   }
 }
