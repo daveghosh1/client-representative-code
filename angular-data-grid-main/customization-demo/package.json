@@ -22,7 +22,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+     "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
+    "ci": "npm run test-headless"
   },
   "dependencies": {
     "@angular/animations": "^16.0.0",
@@ -33,17 +35,19 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
-    "ag-grid-angular": "^30.0.0",
-    "ag-grid-community": "^30.0.0",
+    "ag-grid-angular": "^31.3.2",
+    "ag-grid-community": "^31.3.2",
+    "ag-grid-enterprise": "^31.3.2",
     "rxjs": "^7.8.0",
+    "core-js": "^2.6.12",
     "zone.js": "^0.13.0"
   },
- "devDependencies": {
+  "devDependencies": {
     "@angular-devkit/build-angular": "^16.0.0",
     "@angular/cli": "^16.0.0",
     "@angular/compiler-cli": "^16.0.0",
     "@angular/language-service": "^16.0.0",
-    "@types/jasmine": "^4.3.0",
+    "@types/jasmine": "^4.3.1",
     "@types/jasminewd2": "~2.0.10",
     "@types/node": "^18.0.0",
     "jasmine-core": "^4.5.0",
