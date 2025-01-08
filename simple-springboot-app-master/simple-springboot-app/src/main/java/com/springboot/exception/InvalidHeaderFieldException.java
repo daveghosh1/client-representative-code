@@ -7,7 +7,8 @@ public class InvalidHeaderFieldException extends RuntimeException {
 	private String message;
 
 	public InvalidHeaderFieldException(String message) {
-		this.setMessage(message);
+		super(message);
+		this.message = message;
 	}
 
 	public String getMessage() {
