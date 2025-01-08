@@ -38,5 +38,10 @@ describe('AppComponent', () => {
       const compiled = fixture.debugElement.nativeElement;
       expect(compiled.querySelector('h1').textContent).toContain('Welcome to my-angular-app!');
     }));
+    it('should have cellEditor as numericEditorComponent for Price column', () => {
+      const priceColumn = component.columnDefs.find(col => col.headerName === 'Price');
+      expect(priceColumn).toBeDefined();
+      expect(priceColumn.cellEditor).toBe('numericEditorComponent');
+    });
 
 });
