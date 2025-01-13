@@ -11,7 +11,8 @@ import com.springboot.service.Animal;
 @RestController
 @RequestMapping("/autowire")
 public class AutowiredController {
-	
+
+    @Autowired
 	private Animal animal;
 
 	//Setter Injection

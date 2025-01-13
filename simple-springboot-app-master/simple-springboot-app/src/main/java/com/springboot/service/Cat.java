@@ -2,8 +2,7 @@ package com.springboot.service;
 
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
-
-//@Primary
+6@Primary
 @Service
 public class Cat implements Animal {
 

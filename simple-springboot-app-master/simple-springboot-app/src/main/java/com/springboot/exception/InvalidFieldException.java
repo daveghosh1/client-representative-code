@@ -7,7 +7,7 @@ public class InvalidFieldException extends RuntimeException {
 	private String message;
 
 	public InvalidFieldException(String message) {
-		this.setMessage(message);
+		this.message = message;
 	}
 
 	public String getMessage() {
