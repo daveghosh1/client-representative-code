@@ -9,7 +9,7 @@ import {RangeFilterComponent} from './range-filter.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-
+  title = 'my-angular-app';
   defaultColDef = {
     sortable: true,
     filter: true
