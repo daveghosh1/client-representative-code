@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.springboot.service.Animal;
 
+/**
+ * Controller for handling autowired-related requests.
+ */
 @RestController
 @RequestMapping("/autowire")
 public class AutowiredController {
@@ -15,7 +18,11 @@ public class AutowiredController {
     @Autowired
 	private Animal animal;
 
-	//Setter Injection
+	/**
+	 * Setter injection for the Animal dependency.
+	 *
+	 * @param animal the Animal implementation
+	 */
 	@Autowired
 	public void setAnimal(@Qualifier("dog") Animal animal) {
 		this.animal = animal;
@@ -44,6 +51,12 @@ public class AutowiredController {
 	@Autowired
 	private Animal animal;*/
 
+
+	/**
+	 * Retrieves the characteristics of the dog.
+	 *
+	 * @return the characteristics of the dog
+	 */
 	@GetMapping
 	public String fetchDogCharacteristics() {
 		return animal.characteristics();

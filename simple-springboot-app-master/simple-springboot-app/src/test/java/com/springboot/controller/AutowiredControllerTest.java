@@ -17,6 +17,9 @@ import org.springframework.boot.test.mock.mockito.*;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.*;
 
+/**
+ * Test class for AutowiredController.
+ */
 @WebMvcTest(AutowiredController.class)
 public class AutowiredControllerTest {
 
@@ -30,12 +33,20 @@ public class AutowiredControllerTest {
     @InjectMocks
     private AutowiredController autowiredController;
 
+    /**
+     * Sets up the test environment.
+     */
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
         mockMvc = MockMvcBuilders.standaloneSetup(autowiredController).build();
     }
 
+    /**
+     * Tests fetching dog characteristics.
+     *
+     * @throws Exception if an error occurs during the test
+     */
     @Test
     public void testFetchDogCharacteristics() throws Exception {
         when(animal.characteristics()).thenReturn("Barks");

@@ -18,7 +18,9 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.bind.annotation.*;
 
-
+/**
+ * Test class for StudentController.
+ */
 @WebMvcTest(StudentController.class)
 public class StudentControllerTest {
 
@@ -29,6 +31,9 @@ public class StudentControllerTest {
     private StudentController studentController;
 
 
+    /**
+     * Sets up the test environment.
+     */
     @BeforeEach
     public void setUp() {
         MockitoAnnotations.openMocks(this);
@@ -37,6 +42,11 @@ public class StudentControllerTest {
                 .build();
     }
 
+    /**
+     * Tests saving valid student information.
+     *
+     * @throws Exception if an error occurs during the test
+     */
     @Test
     public void testSaveStudentInformation_Valid() throws Exception {
         String studentJson = "{\"id\":\"1\",\"firstName\":\"John\",\"lastName\":\"Doe\",\"age\":\"20\"}";
@@ -48,6 +58,12 @@ public class StudentControllerTest {
                 .andExpect(content().string("Authorization valid-key is valid, and Data is saved"));
     }
 
+
+    /**
+     * Tests saving invalid student information.
+     *
+     * @throws Exception if an error occurs during the test
+     */
     @Test
     public void testSaveStudentInformation_Invalid() throws Exception {
         String studentJson = "{\"id\":\"1\",\"firstName\":\"John\",\"lastName\":\"\",\"age\":\"20\"}";
